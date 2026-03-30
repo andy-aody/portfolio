@@ -1,0 +1,226 @@
+{
+    "meta": {
+        "title": "你的名字 — 全栈开发工程师",
+        "description": "专注于使用现代 Web 技术构建卓越数字体验的全栈开发工程师。"
+    },
+    "nav": {
+        "about": "关于我",
+        "skills": "技能",
+        "experience": "工作经历",
+        "projects": "项目",
+        "education": "教育背景",
+        "contact": "联系我"
+    },
+    "hero": {
+        "name": "你的名字",
+        "title": "全栈开发工程师",
+        "tagline": "构建高质量、像素级精准的 Web 数字体验。"
+    },
+    "about": {
+        "heading": "关于我",
+        "paragraphs": [
+            "我是一名热爱构建兼具美感和功能性的 Web 应用程序的全栈开发工程师。拥有前端框架和后端系统的丰富经验，我乐于解决复杂问题并将想法变为现实。",
+            "我的软件开发之旅始于对互联网运作方式的好奇。如今，我专注于使用 React、Next.js、Node.js 和云服务等现代技术创建健壮、可扩展的应用程序。",
+            "在不写代码的时候，我喜欢探索新技术、为开源项目做贡献，以及通过技术写作分享知识。"
+        ]
+    },
+    "skills": {
+        "heading": "技能",
+        "categories": [
+            {
+                "name": "前端",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "HTML/CSS",
+                    "Tailwind CSS",
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "后端",
+                "items": [
+                    "Node.js",
+                    "Express",
+                    "Python",
+                    "Java",
+                    "Spring Boot",
+                    "REST API",
+                    "GraphQL"
+                ]
+            },
+            {
+                "name": "数据库",
+                "items": [
+                    "PostgreSQL",
+                    "MySQL",
+                    "MongoDB",
+                    "Redis",
+                    "Prisma"
+                ]
+            },
+            {
+                "name": "DevOps",
+                "items": [
+                    "Docker",
+                    "AWS",
+                    "CI/CD",
+                    "Nginx",
+                    "Linux",
+                    "GitHub Actions"
+                ]
+            },
+            {
+                "name": "工具",
+                "items": [
+                    "Git",
+                    "VS Code",
+                    "Figma",
+                    "Postman",
+                    "Jira"
+                ]
+            }
+        ]
+    },
+    "experience": {
+        "heading": "工作经历",
+        "items": [
+            {
+                "company": "公司 A",
+                "title": "高级全栈开发工程师",
+                "startDate": "2022",
+                "endDate": "至今",
+                "description": "主导核心平台功能开发，提升系统性能和用户体验。使用 Node.js 架设微服务，使用 React 构建交互式仪表板。",
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "PostgreSQL",
+                    "AWS"
+                ]
+            },
+            {
+                "company": "公司 B",
+                "title": "全栈开发工程师",
+                "startDate": "2020",
+                "endDate": "2022",
+                "description": "开发和维护多个服务数千日活用户的 Web 应用程序。实现 RESTful API 并集成第三方服务。",
+                "technologies": [
+                    "Vue.js",
+                    "Python",
+                    "Django",
+                    "MySQL",
+                    "Docker"
+                ]
+            },
+            {
+                "company": "公司 C",
+                "title": "初级开发工程师",
+                "startDate": "2018",
+                "endDate": "2020",
+                "description": "构建响应式 Web 界面并参与后端开发。在敏捷开发环境中与跨职能团队协作。",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Express",
+                    "MongoDB"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "heading": "项目",
+        "items": [
+            {
+                "name": "项目 Alpha",
+                "description": "全栈电商平台，包含实时库存管理、支付处理和管理后台。",
+                "technologies": [
+                    "Next.js",
+                    "TypeScript",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Stripe"
+                ],
+                "github": "https://github.com/yourusername/project-alpha",
+                "live": "https://project-alpha.vercel.app",
+                "featured": true
+            },
+            {
+                "name": "项目 Beta",
+                "description": "基于 WebSocket 的实时协作任务管理应用，支持团队工作区。",
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "Socket.io",
+                    "MongoDB",
+                    "Redis"
+                ],
+                "github": "https://github.com/yourusername/project-beta",
+                "live": "https://project-beta.vercel.app",
+                "featured": true
+            },
+            {
+                "name": "项目 Gamma",
+                "description": "API 网关服务，提供限流、认证和请求日志功能，用于微服务架构。",
+                "technologies": [
+                    "Node.js",
+                    "Express",
+                    "Redis",
+                    "Docker",
+                    "AWS"
+                ],
+                "github": "https://github.com/yourusername/project-gamma",
+                "live": "",
+                "featured": false
+            },
+            {
+                "name": "项目 Delta",
+                "description": "基于 Next.js 的开发者个人网站和博客，支持 MDX 内容、SEO 优化和深色模式。",
+                "technologies": [
+                    "Next.js",
+                    "MDX",
+                    "Tailwind CSS",
+                    "Vercel"
+                ],
+                "github": "https://github.com/yourusername/project-delta",
+                "live": "https://project-delta.vercel.app",
+                "featured": false
+            }
+        ]
+    },
+    "education": {
+        "heading": "教育背景",
+        "items": [
+            {
+                "school": "大学名称",
+                "degree": "计算机科学与技术 学士",
+                "startDate": "2014",
+                "endDate": "2018",
+                "description": "专注于软件工程、算法和 Web 开发。以优异成绩毕业。"
+            }
+        ]
+    },
+    "contact": {
+        "heading": "联系我",
+        "description": "我目前对新的工作机会持开放态度。无论您有什么问题还是只想打个招呼，都欢迎随时联系我，我会尽快回复。",
+        "email": "your.email@example.com",
+        "socials": {
+            "github": "https://github.com/yourusername",
+            "linkedin": "https://linkedin.com/in/yourusername"
+        }
+    },
+    "footer": {
+        "credit": "由你的名字设计 & 构建",
+        "inspiration": "设计灵感来自 Brittany Chiang"
+    },
+    "theme": {
+        "light": "浅色",
+        "dark": "深色"
+    },
+    "mobileNav": {
+        "menu": "菜单",
+        "close": "关闭"
+    }
+}

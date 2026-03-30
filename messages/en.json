@@ -1,0 +1,226 @@
+{
+    "meta": {
+        "title": "Your Name — Full-Stack Developer",
+        "description": "Full-stack developer specializing in building exceptional digital experiences with modern web technologies."
+    },
+    "nav": {
+        "about": "About",
+        "skills": "Skills",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "hero": {
+        "name": "Your Name",
+        "title": "Full-Stack Developer",
+        "tagline": "I build accessible, pixel-perfect digital experiences for the web."
+    },
+    "about": {
+        "heading": "About",
+        "paragraphs": [
+            "I'm a full-stack developer passionate about building web applications that are both beautiful and functional. With experience spanning front-end frameworks and back-end systems, I enjoy tackling complex problems and turning ideas into reality.",
+            "My journey in software development began with a curiosity about how things work on the internet. Today, I specialize in creating robust, scalable applications using modern technologies like React, Next.js, Node.js, and cloud services.",
+            "When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge through technical writing."
+        ]
+    },
+    "skills": {
+        "heading": "Skills",
+        "categories": [
+            {
+                "name": "Frontend",
+                "items": [
+                    "React",
+                    "Next.js",
+                    "TypeScript",
+                    "JavaScript",
+                    "HTML/CSS",
+                    "Tailwind CSS",
+                    "Vue.js"
+                ]
+            },
+            {
+                "name": "Backend",
+                "items": [
+                    "Node.js",
+                    "Express",
+                    "Python",
+                    "Java",
+                    "Spring Boot",
+                    "REST API",
+                    "GraphQL"
+                ]
+            },
+            {
+                "name": "Database",
+                "items": [
+                    "PostgreSQL",
+                    "MySQL",
+                    "MongoDB",
+                    "Redis",
+                    "Prisma"
+                ]
+            },
+            {
+                "name": "DevOps",
+                "items": [
+                    "Docker",
+                    "AWS",
+                    "CI/CD",
+                    "Nginx",
+                    "Linux",
+                    "GitHub Actions"
+                ]
+            },
+            {
+                "name": "Tools",
+                "items": [
+                    "Git",
+                    "VS Code",
+                    "Figma",
+                    "Postman",
+                    "Jira"
+                ]
+            }
+        ]
+    },
+    "experience": {
+        "heading": "Experience",
+        "items": [
+            {
+                "company": "Company A",
+                "title": "Senior Full-Stack Developer",
+                "startDate": "2022",
+                "endDate": "Present",
+                "description": "Led the development of core platform features, improving system performance and user experience. Architected microservices with Node.js and built interactive dashboards with React.",
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "TypeScript",
+                    "PostgreSQL",
+                    "AWS"
+                ]
+            },
+            {
+                "company": "Company B",
+                "title": "Full-Stack Developer",
+                "startDate": "2020",
+                "endDate": "2022",
+                "description": "Developed and maintained multiple web applications serving thousands of daily active users. Implemented RESTful APIs and integrated third-party services.",
+                "technologies": [
+                    "Vue.js",
+                    "Python",
+                    "Django",
+                    "MySQL",
+                    "Docker"
+                ]
+            },
+            {
+                "company": "Company C",
+                "title": "Junior Developer",
+                "startDate": "2018",
+                "endDate": "2020",
+                "description": "Built responsive web interfaces and contributed to backend development. Collaborated with cross-functional teams in an agile environment.",
+                "technologies": [
+                    "JavaScript",
+                    "React",
+                    "Express",
+                    "MongoDB"
+                ]
+            }
+        ]
+    },
+    "projects": {
+        "heading": "Projects",
+        "items": [
+            {
+                "name": "Project Alpha",
+                "description": "A full-stack e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
+                "technologies": [
+                    "Next.js",
+                    "TypeScript",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Stripe"
+                ],
+                "github": "https://github.com/yourusername/project-alpha",
+                "live": "https://project-alpha.vercel.app",
+                "featured": true
+            },
+            {
+                "name": "Project Beta",
+                "description": "A real-time collaborative task management application with WebSocket-based updates and team workspaces.",
+                "technologies": [
+                    "React",
+                    "Node.js",
+                    "Socket.io",
+                    "MongoDB",
+                    "Redis"
+                ],
+                "github": "https://github.com/yourusername/project-beta",
+                "live": "https://project-beta.vercel.app",
+                "featured": true
+            },
+            {
+                "name": "Project Gamma",
+                "description": "An API gateway service with rate limiting, authentication, and request logging for microservices architecture.",
+                "technologies": [
+                    "Node.js",
+                    "Express",
+                    "Redis",
+                    "Docker",
+                    "AWS"
+                ],
+                "github": "https://github.com/yourusername/project-gamma",
+                "live": "",
+                "featured": false
+            },
+            {
+                "name": "Project Delta",
+                "description": "A developer portfolio and blog built with Next.js, featuring MDX content, SEO optimization, and dark mode.",
+                "technologies": [
+                    "Next.js",
+                    "MDX",
+                    "Tailwind CSS",
+                    "Vercel"
+                ],
+                "github": "https://github.com/yourusername/project-delta",
+                "live": "https://project-delta.vercel.app",
+                "featured": false
+            }
+        ]
+    },
+    "education": {
+        "heading": "Education",
+        "items": [
+            {
+                "school": "University Name",
+                "degree": "Bachelor of Science in Computer Science",
+                "startDate": "2014",
+                "endDate": "2018",
+                "description": "Focused on software engineering, algorithms, and web development. Graduated with honors."
+            }
+        ]
+    },
+    "contact": {
+        "heading": "Contact",
+        "description": "I'm currently open to new opportunities. Whether you have a question or just want to say hi, feel free to reach out and I'll get back to you as soon as possible.",
+        "email": "your.email@example.com",
+        "socials": {
+            "github": "https://github.com/yourusername",
+            "linkedin": "https://linkedin.com/in/yourusername"
+        }
+    },
+    "footer": {
+        "credit": "Designed & Built by Your Name",
+        "inspiration": "Design inspired by Brittany Chiang"
+    },
+    "theme": {
+        "light": "Light",
+        "dark": "Dark"
+    },
+    "mobileNav": {
+        "menu": "Menu",
+        "close": "Close"
+    }
+}
