@@ -2,11 +2,20 @@ import type { ExperienceItem as ExperienceItemType } from "@/lib/types";
 
 type Props = {
   item: ExperienceItemType;
+  isFirst?: boolean;
 };
 
-export default function ExperienceItem({ item }: Props) {
+export default function ExperienceItem({ item, isFirst = false }: Props) {
   return (
-    <div className="group relative pb-8">
+    <div className="group relative pb-8 pl-7">
+      {/* Timeline dot */}
+      <span
+        className={`absolute left-0 top-2 h-[11px] w-[11px] rounded-full border-2 ${
+          isFirst
+            ? "border-violet-500 bg-violet-500 dark:border-violet-400 dark:bg-violet-400"
+            : "border-zinc-300 bg-zinc-50 dark:border-gray-600 dark:bg-gray-900"
+        }`}
+      />
       <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-gray-500">
         {item.startDate} — {item.endDate}
       </div>

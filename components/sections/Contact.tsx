@@ -1,12 +1,17 @@
 import { useTranslations } from "next-intl";
 import { Mail, Github, Linkedin } from "lucide-react";
+import XLogo from "@/components/ui/XLogo";
 import SectionHeading from "@/components/ui/SectionHeading";
 
 export default function Contact() {
   const t = useTranslations("contact");
 
   const email: string = t.raw("email");
-  const socials = t.raw("socials") as { github: string; linkedin: string };
+  const socials = t.raw("socials") as {
+    github: string;
+    linkedin: string;
+    x: string;
+  };
 
   return (
     <section id="contact" className="scroll-mt-24 pb-16 lg:pb-24">
@@ -40,6 +45,15 @@ export default function Contact() {
             aria-label="LinkedIn"
           >
             <Linkedin size={20} />
+          </a>
+          <a
+            href={socials.x}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-zinc-500 transition-colors hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400"
+            aria-label="X"
+          >
+            <XLogo size={20} />
           </a>
         </div>
       </div>
