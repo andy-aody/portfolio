@@ -2,8 +2,8 @@
 
 import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail } from "lucide-react";
-import ThemeToggle from "@/components/ui/ThemeToggle";
-import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
+import XLogo from "@/components/ui/XLogo";
+
 import { useEffect, useState } from "react";
 
 const NAV_ITEMS = [
@@ -19,8 +19,18 @@ export default function LeftPanel() {
   const [activeSection, setActiveSection] = useState("about");
 
   useEffect(() => {
+    const isAtBottom = () =>
+      window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
+
+    const handleScroll = () => {
+      if (isAtBottom()) {
+        setActiveSection(NAV_ITEMS[NAV_ITEMS.length - 1]);
+      }
+    };
+
     const observer = new IntersectionObserver(
       (entries) => {
+        if (isAtBottom()) return;
         for (const entry of entries) {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
@@ -35,12 +45,18 @@ export default function LeftPanel() {
       if (el) observer.observe(el);
     }
 
-    return () => observer.disconnect();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const socials = t.raw("contact.socials") as {
     github: string;
     linkedin: string;
+    x: string;
   };
   const email: string = t.raw("contact.email");
 
@@ -48,7 +64,10 @@ export default function LeftPanel() {
     <header className="hidden lg:sticky lg:top-0 lg:flex lg:h-screen lg:w-1/2 lg:max-w-md lg:flex-col lg:justify-between lg:py-24">
       <div>
         {/* Identity */}
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-gray-100">
+        <h1
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className="cursor-pointer text-4xl font-bold tracking-tight text-zinc-900 dark:text-gray-100"
+        >
           {t("hero.name")}
         </h1>
         <h2 className="mt-3 text-lg font-medium accent-text">
@@ -107,16 +126,21 @@ export default function LeftPanel() {
           <Linkedin size={20} />
         </a>
         <a
+          href={socials.x}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-500 transition-colors hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400"
+          aria-label="X"
+        >
+          <XLogo size={20} />
+        </a>
+        <a
           href={`mailto:${email}`}
           className="text-zinc-500 transition-colors hover:text-violet-600 dark:text-gray-400 dark:hover:text-violet-400"
           aria-label="Email"
         >
           <Mail size={20} />
         </a>
-        <div className="ml-auto flex items-center gap-1">
-          <ThemeToggle />
-          <LanguageSwitcher />
-        </div>
       </div>
     </header>
   );

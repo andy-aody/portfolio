@@ -1,6 +1,8 @@
 import LeftPanel from "@/components/layout/LeftPanel";
 import RightPanel from "@/components/layout/RightPanel";
 import MobileNav from "@/components/layout/MobileNav";
+import ScrollToTop from "@/components/ui/ScrollToTop";
+import FloatingControls from "@/components/ui/FloatingControls";
 
 export default function HomePage() {
   return (
@@ -10,6 +12,8 @@ export default function HomePage() {
         <LeftPanel />
         <RightPanel />
       </div>
+      <ScrollToTop />
+      <FloatingControls />
     </div>
   );
 }
