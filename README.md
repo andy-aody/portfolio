@@ -1,20 +1,20 @@
 # Personal Portfolio
 
-基于 Next.js 14 App Router 构建的个人作品集网站，采用左侧固定、右侧滚动的双栏布局，支持中英双语与深浅主题切换，适合作为全栈开发工程师的在线简历与项目展示页。
+A full-stack developer's personal portfolio website built with Next.js 14 App Router. Features a fixed left sidebar with scrolling right panel layout, supporting dual-language (English/Chinese) and light/dark theme switching. Perfect for showcasing professional experience and projects.
 
-## 项目特点
+## Key Features
 
-- 基于 Next.js 14 + TypeScript + Tailwind CSS
-- 支持 `en` / `zh` 双语路由切换
-- 支持深色 / 浅色主题切换，默认深色
-- 单页滚动式信息架构，适合展示个人经历与项目
-- 内容统一维护在 `messages/*.json`
-- 使用 Next.js Metadata API 生成 SEO 信息
-- 可直接部署到 Vercel
+- Built with Next.js 14 + TypeScript + Tailwind CSS
+- Dual-language support with route switching: `en` / `zh`
+- Light/dark theme toggle (dark theme by default)
+- Single-page scrollable architecture optimized for showcasing experience and projects
+- Centralized content management via `messages/*.json`
+- SEO optimization with Next.js Metadata API
+- Ready for direct deployment to Vercel
 
-## 页面结构
+## Page Sections
 
-网站当前包含以下内容板块：
+The website includes the following content sections:
 
 - About
 - Skills
@@ -23,56 +23,56 @@
 - Education
 - Contact
 
-桌面端为左固定右滚动布局，移动端退化为顶部导航加单栏滚动。
+Desktop layout: fixed left sidebar + scrolling right panel. Mobile layout: top navigation + single-column scroll.
 
-## 技术栈
+## Tech Stack
 
-| 类别   | 方案                    |
-| ------ | ----------------------- |
-| 框架   | Next.js 14 (App Router) |
-| 语言   | TypeScript              |
-| 样式   | Tailwind CSS            |
-| 国际化 | next-intl               |
-| 主题   | next-themes             |
-| 图标   | lucide-react            |
-| SEO    | Next.js Metadata API    |
-| 部署   | Vercel                  |
+| Category             | Solution                |
+| -------------------- | ----------------------- |
+| Framework            | Next.js 14 (App Router) |
+| Language             | TypeScript              |
+| Styling              | Tailwind CSS            |
+| Internationalization | next-intl               |
+| Theme Management     | next-themes             |
+| Icons                | lucide-react            |
+| SEO                  | Next.js Metadata API    |
+| Deployment           | Vercel                  |
 
-## 本地开发
+## Local Development
 
-### 环境要求
+### Requirements
 
 - Node.js >= 18.17
 - npm
 
-### 安装依赖
+### Installation
 
 ```bash
 npm install
 ```
 
-### 启动开发环境
+### Start Development Server
 
 ```bash
 npm run dev
 ```
 
-开发服务器固定运行在 `3200` 端口：
+The development server runs on port `3200`:
 
 ```text
 http://localhost:3200
 ```
 
-### 常用命令
+### Available Commands
 
 ```bash
-npm run dev
-npm run build
-npm run lint
-npm run start
+npm run dev      # Start development server
+npm run build    # Production build
+npm run lint     # Run ESLint
+npm run start    # Start production server
 ```
 
-## 项目结构
+## Project Structure
 
 ```text
 portfolio/
@@ -97,63 +97,63 @@ portfolio/
 └── package.json
 ```
 
-### 目录说明
+### Directory Descriptions
 
-- `app/[locale]/`: 国际化页面入口，分别对应 `/en` 和 `/zh`
-- `components/layout/`: 页面整体布局相关组件
-- `components/sections/`: 各内容板块组件
-- `components/ui/`: 通用 UI 组件
-- `messages/`: 中英文文案与内容数据源
-- `i18n/`: 路由与请求配置
-- `lib/`: 类型定义与工具函数
-- `public/images/`: 项目图片与静态资源
+- `app/[locale]/`: Internationalized page entry point (maps to `/en` and `/zh`)
+- `components/layout/`: Layout and structural components
+- `components/sections/`: Content section components
+- `components/ui/`: Reusable UI components
+- `messages/`: English and Chinese content and copy (data source)
+- `i18n/`: i18n routing and request configuration
+- `lib/`: TypeScript type definitions and utility functions
+- `public/images/`: Project images and static assets
 
-## 内容维护
+## Content Management
 
-项目不依赖 CMS 或数据库，所有展示内容都在 JSON 文件中维护。
+This project has no CMS or database dependency. All content is maintained directly in JSON files.
 
-### 文案与数据
+### Content Files
 
-- 英文内容：`messages/en.json`
-- 中文内容：`messages/zh.json`
+- English content: `messages/en.json`
+- Chinese content: `messages/zh.json`
 
-这些文件同时承担：
+These files serve multiple purposes:
 
-- 页面文本翻译
-- 个人介绍内容
-- 技能分类与标签
-- 工作经历
-- 项目列表
-- 教育背景
-- 联系方式
-- SEO metadata 文案
+- UI text translations
+- Personal profile information
+- Skills categorization and tags
+- Work experience timeline
+- Project listings
+- Education background
+- Contact information
+- SEO metadata copy
 
-修改内容后重新构建或重新部署即可生效。
+After modifying content, simply rebuild or redeploy for changes to take effect.
 
-## 国际化约定
+## Internationalization
 
-- 支持语言：`en`、`zh`
-- 默认语言：`en`
-- 路由形式：`/en`、`/zh`
-- Server Component 使用 `getTranslations()`
-- Client Component 使用 `useTranslations()`
-- 读取对象或数组时使用 `t.raw("key")`
+- Supported languages: `en`, `zh`
+- Default language: `en`
+- Route format: `/en`, `/zh`
+- Server Components: use `getTranslations()`
+- Client Components: use `useTranslations()`
+- For objects/arrays: use `t.raw("key")`
 
-## 主题约定
+## Theme System
 
-- 使用 `next-themes` 管理主题
-- `darkMode: "class"`
-- 默认深色主题，不跟随系统
-- 强调色为紫色系
+- Theme management via `next-themes`
+- `darkMode: "class"` configuration
+- Dark theme enabled by default (system preference not followed)
+- Accent color: violet palette
 
 ## SEO
 
-项目已集成以下 SEO 能力：
+The project includes the following SEO features:
 
-- 页面 metadata 动态生成
-- Open Graph 基础信息
-- `sitemap.ts`
-- `robots.ts`
-- 多语言 alternates
+- Dynamic metadata generation
+- Open Graph support
+- `sitemap.ts` auto-generation
+- `robots.txt` configuration
+- Multi-language alternates
 
-如需完善分享卡片，可在 `public/` 中补充 OG 图片资源。
+To enhance social sharing cards, add OG image assets to the `public/` directory.
