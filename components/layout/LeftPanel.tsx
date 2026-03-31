@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import { Github, Linkedin, Mail } from "lucide-react";
 import XLogo from "@/components/ui/XLogo";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const NAV_ITEMS = [
   "about",
@@ -17,41 +17,46 @@ const NAV_ITEMS = [
 export default function LeftPanel() {
   const t = useTranslations();
   const [activeSection, setActiveSection] = useState("about");
+  const rafId = useRef(0);
 
-  useEffect(() => {
-    const isAtBottom = () =>
+  const updateActiveSection = useCallback(() => {
+    const isAtBottom =
       window.innerHeight + window.scrollY >= document.body.scrollHeight - 50;
 
-    const handleScroll = () => {
-      if (isAtBottom()) {
-        setActiveSection(NAV_ITEMS[NAV_ITEMS.length - 1]);
-      }
-    };
+    if (isAtBottom) {
+      setActiveSection(NAV_ITEMS[NAV_ITEMS.length - 1]);
+      return;
+    }
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isAtBottom()) return;
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            setActiveSection(entry.target.id);
-          }
-        }
-      },
-      { rootMargin: "-40% 0px -60% 0px" },
-    );
+    const targetLine = window.innerHeight * 0.4;
+    let current: string = NAV_ITEMS[0];
 
     for (const item of NAV_ITEMS) {
       const el = document.getElementById(item);
-      if (el) observer.observe(el);
+      if (!el) continue;
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= targetLine) {
+        current = item;
+      }
     }
 
+    setActiveSection(current);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      cancelAnimationFrame(rafId.current);
+      rafId.current = requestAnimationFrame(updateActiveSection);
+    };
+
+    updateActiveSection();
     window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
-      observer.disconnect();
+      cancelAnimationFrame(rafId.current);
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [updateActiveSection]);
 
   const socials = t.raw("contact.socials") as {
     github: string;
