@@ -1,5 +1,6 @@
 import { ExternalLink, Github } from "lucide-react";
 import type { ProjectItem } from "@/lib/types";
+import TechTag from "@/components/ui/TechTag";
 
 type Props = {
   project: ProjectItem;
@@ -45,12 +46,7 @@ export default function ProjectCard({ project }: Props) {
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
         {project.technologies.map((tech) => (
-          <span
-            key={tech}
-            className="rounded-full bg-accent-fill px-2.5 py-0.5 text-xs font-medium text-accent-text"
-          >
-            {tech}
-          </span>
+          <TechTag key={tech} name={tech} />
         ))}
       </div>
     </div>

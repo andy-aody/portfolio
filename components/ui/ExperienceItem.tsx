@@ -1,4 +1,5 @@
 import type { ExperienceItem as ExperienceItemType } from "@/lib/types";
+import TechTag from "@/components/ui/TechTag";
 
 type Props = {
   item: ExperienceItemType;
@@ -27,12 +28,7 @@ export default function ExperienceItem({ item, isFirst = false }: Props) {
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           {item.technologies.map((tech) => (
-            <span
-              key={tech}
-              className="rounded-full bg-accent-fill px-2.5 py-0.5 text-xs font-medium text-accent-text"
-            >
-              {tech}
-            </span>
+            <TechTag key={tech} name={tech} />
           ))}
         </div>
       </div>

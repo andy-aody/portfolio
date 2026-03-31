@@ -20,7 +20,11 @@ export default function Skills() {
             </h3>
             <div className="flex flex-wrap gap-2">
               {category.items.map((item) => (
-                <SkillBadge key={item} name={item} />
+                <SkillBadge
+                  key={item}
+                  name={item}
+                  categoryName={category.name}
+                />
               ))}
             </div>
           </div>
