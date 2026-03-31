@@ -19,7 +19,7 @@ export default function LanguageSwitcher() {
   return (
     <button
       onClick={switchLocale}
-      className="rounded-lg p-2 text-zinc-600 transition-colors hover:bg-zinc-200 dark:text-gray-400 dark:hover:bg-gray-800"
+      className="rounded-lg p-2 text-body transition-colors hover:bg-surface"
       aria-label={locale === "en" ? "切换到中文" : "Switch to English"}
       title={locale === "en" ? "切换到中文" : "Switch to English"}
     >

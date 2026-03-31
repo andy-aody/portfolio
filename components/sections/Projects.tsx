@@ -11,7 +11,7 @@ export default function Projects() {
   return (
     <section id="projects" className="scroll-mt-24 pb-16 lg:pb-24">
       <SectionHeading id="projects-heading">{t("heading")}</SectionHeading>
-      <div className="rounded-2xl border border-zinc-200/60 bg-white/50 p-6 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
+      <div className="rounded-2xl border border-border bg-card p-6 backdrop-blur-sm">
         {items.map((item, index) => (
           <ProjectCard key={index} project={item} />
         ))}

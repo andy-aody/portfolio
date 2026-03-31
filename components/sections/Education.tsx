@@ -10,20 +10,20 @@ export default function Education() {
   return (
     <section id="education" className="scroll-mt-24 pb-16 lg:pb-24">
       <SectionHeading id="education-heading">{t("heading")}</SectionHeading>
-      <div className="rounded-2xl border border-zinc-200/60 bg-white/50 p-6 backdrop-blur-sm dark:border-gray-800 dark:bg-gray-800/30">
+      <div className="rounded-2xl border border-border bg-card p-6 backdrop-blur-sm">
         <div className="space-y-6">
           {items.map((item, index) => (
             <div key={index}>
-              <div className="mb-1 text-xs font-semibold uppercase tracking-wide text-zinc-500 dark:text-gray-500">
+              <div className="mb-1 text-xs font-medium uppercase tracking-wide text-muted">
                 {item.startDate} — {item.endDate}
               </div>
               <div>
-                <h3 className="text-base font-semibold text-zinc-900 dark:text-gray-100">
+                <h3 className="text-base font-medium text-heading">
                   {item.degree}
                 </h3>
-                <p className="accent-text text-sm font-medium">{item.school}</p>
+                <p className="accent-text text-sm">{item.school}</p>
                 {item.description && (
-                  <p className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-gray-400">
+                  <p className="mt-2 text-sm leading-relaxed text-body">
                     {item.description}
                   </p>
                 )}

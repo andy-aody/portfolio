@@ -13,12 +13,9 @@ export default function Skills() {
       <SectionHeading id="skills-heading">{t("heading")}</SectionHeading>
       <div className="space-y-4">
         {categories.map((category) => (
-          <div
-            key={category.name}
-            className="rounded-xl bg-zinc-50 p-4 dark:bg-gray-800/40"
-          >
-            <h3 className="mb-3 flex items-center gap-2 text-sm font-semibold text-zinc-800 dark:text-gray-200">
-              <span className="inline-block h-2 w-2 rounded-full bg-violet-500 dark:bg-violet-400" />
+          <div key={category.name} className="rounded-xl bg-surface p-4">
+            <h3 className="mb-3 flex items-center gap-2 text-sm font-medium text-heading">
+              <span className="inline-block h-2 w-2 rounded-full bg-accent" />
               {category.name}
             </h3>
             <div className="flex flex-wrap gap-2">

@@ -13,7 +13,7 @@ export default function Experience() {
       <SectionHeading id="experience-heading">{t("heading")}</SectionHeading>
       <div className="relative">
         {/* Timeline vertical line */}
-        <div className="absolute bottom-0 left-[5px] top-2 w-px bg-zinc-200 dark:bg-gray-700" />
+        <div className="absolute bottom-0 left-[5px] top-2 w-px bg-border" />
         {items.map((item, index) => (
           <ExperienceItemComponent
             key={index}

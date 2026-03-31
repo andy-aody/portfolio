@@ -9,9 +9,27 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        page: "rgb(var(--color-page) / <alpha-value>)",
+        surface: "rgb(var(--color-surface) / <alpha-value>)",
+        card: "rgb(var(--color-card) / <alpha-value>)",
+        border: "rgb(var(--color-border) / <alpha-value>)",
+        heading: "rgb(var(--color-heading) / <alpha-value>)",
+        body: "rgb(var(--color-body) / <alpha-value>)",
+        muted: "rgb(var(--color-muted) / <alpha-value>)",
         accent: {
-          light: "#7c3aed",
-          dark: "#a78bfa",
+          DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          fill: "rgb(var(--color-accent-fill) / <alpha-value>)",
+          text: "rgb(var(--color-accent-text) / <alpha-value>)",
+        },
+        tag: {
+          "frontend-bg": "rgb(var(--color-tag-frontend-bg) / <alpha-value>)",
+          "frontend-text": "rgb(var(--color-tag-frontend-text) / <alpha-value>)",
+          "backend-bg": "rgb(var(--color-tag-backend-bg) / <alpha-value>)",
+          "backend-text": "rgb(var(--color-tag-backend-text) / <alpha-value>)",
+          "devops-bg": "rgb(var(--color-tag-devops-bg) / <alpha-value>)",
+          "devops-text": "rgb(var(--color-tag-devops-text) / <alpha-value>)",
+          "neutral-bg": "rgb(var(--color-tag-neutral-bg) / <alpha-value>)",
+          "neutral-text": "rgb(var(--color-tag-neutral-text) / <alpha-value>)",
         },
       },
       fontFamily: {

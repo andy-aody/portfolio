@@ -2,33 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+SC:wght@400;500&display=swap");
 
 @layer base {
+  :root {
+    --color-page: 250 246 241;
+    --color-surface: 245 239 232;
+    --color-card: 250 246 241;
+    --color-border: 232 224 213;
+    --color-heading: 61 53 48;
+    --color-body: 156 140 130;
+    --color-muted: 176 144 128;
+    --color-accent: 201 125 90;
+    --color-accent-fill: 242 235 227;
+    --color-accent-text: 176 120 80;
+    --color-tag-frontend-bg: 242 235 227;
+    --color-tag-frontend-text: 176 120 80;
+    --color-tag-backend-bg: 232 240 232;
+    --color-tag-backend-text: 90 122 90;
+    --color-tag-devops-bg: 228 234 242;
+    --color-tag-devops-text: 90 110 138;
+    --color-tag-neutral-bg: 237 232 227;
+    --color-tag-neutral-text: 122 110 104;
+  }
+
+  .dark {
+    --color-page: 26 19 12;
+    --color-surface: 22 15 8;
+    --color-card: 30 22 16;
+    --color-border: 58 46 38;
+    --color-heading: 232 221 212;
+    --color-body: 122 100 88;
+    --color-muted: 74 56 40;
+    --color-accent: 201 125 90;
+    --color-accent-fill: 46 30 18;
+    --color-accent-text: 196 149 106;
+    --color-tag-frontend-bg: 46 34 24;
+    --color-tag-frontend-text: 196 149 106;
+    --color-tag-backend-bg: 30 42 30;
+    --color-tag-backend-text: 106 158 120;
+    --color-tag-devops-bg: 30 34 46;
+    --color-tag-devops-text: 106 136 176;
+    --color-tag-neutral-bg: 42 36 32;
+    --color-tag-neutral-text: 138 120 104;
+  }
+
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-zinc-50 text-zinc-900 dark:bg-gray-900 dark:text-gray-100;
+    @apply bg-page text-body;
     transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
-    @apply bg-violet-600/30 dark:bg-violet-400/30;
+    @apply bg-accent/30;
   }
 }
 
 @layer components {
   .accent-text {
-    @apply text-violet-600 dark:text-violet-400;
+    @apply text-accent;
   }
 
   .accent-bg {
-    @apply bg-violet-600 dark:bg-violet-400;
+    @apply bg-accent;
   }
 
   .accent-border {
-    @apply border-violet-600 dark:border-violet-400;
+    @apply border-accent;
   }
 }
