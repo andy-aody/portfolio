@@ -18,6 +18,8 @@ const config: Config = {
         muted: "rgb(var(--color-muted) / <alpha-value>)",
         accent: {
           DEFAULT: "rgb(var(--color-accent) / <alpha-value>)",
+          hover: "rgb(var(--color-accent-hover) / <alpha-value>)",
+          subtle: "rgb(var(--color-accent-subtle) / <alpha-value>)",
           fill: "rgb(var(--color-accent-fill) / <alpha-value>)",
           text: "rgb(var(--color-accent-text) / <alpha-value>)",
         },
@@ -31,6 +33,15 @@ const config: Config = {
           "neutral-bg": "rgb(var(--color-tag-neutral-bg) / <alpha-value>)",
           "neutral-text": "rgb(var(--color-tag-neutral-text) / <alpha-value>)",
         },
+        success: "rgb(var(--color-success) / <alpha-value>)",
+        error: "rgb(var(--color-error) / <alpha-value>)",
+      },
+      boxShadow: {
+        sm: "0 1px 2px 0 rgb(var(--color-shadow) / 0.06)",
+        DEFAULT: "0 1px 3px 0 rgb(var(--color-shadow) / 0.08), 0 1px 2px -1px rgb(var(--color-shadow) / 0.08)",
+        md: "0 4px 6px -1px rgb(var(--color-shadow) / 0.08), 0 2px 4px -2px rgb(var(--color-shadow) / 0.08)",
+        lg: "0 10px 15px -3px rgb(var(--color-shadow) / 0.08), 0 4px 6px -4px rgb(var(--color-shadow) / 0.08)",
+        xl: "0 20px 25px -5px rgb(var(--color-shadow) / 0.08), 0 8px 10px -6px rgb(var(--color-shadow) / 0.08)",
       },
       fontFamily: {
         sans: ["Inter", "Noto Sans SC", "sans-serif"],

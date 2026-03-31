@@ -8,22 +8,27 @@
   :root {
     --color-page: 250 246 241;
     --color-surface: 245 239 232;
-    --color-card: 250 246 241;
+    --color-card: 255 252 248;
     --color-border: 232 224 213;
     --color-heading: 61 53 48;
     --color-body: 156 140 130;
     --color-muted: 176 144 128;
     --color-accent: 201 125 90;
+    --color-accent-hover: 216 145 112;
+    --color-accent-subtle: 235 218 205;
     --color-accent-fill: 242 235 227;
     --color-accent-text: 176 120 80;
-    --color-tag-frontend-bg: 242 235 227;
-    --color-tag-frontend-text: 176 120 80;
-    --color-tag-backend-bg: 232 240 232;
-    --color-tag-backend-text: 90 122 90;
-    --color-tag-devops-bg: 228 234 242;
-    --color-tag-devops-text: 90 110 138;
-    --color-tag-neutral-bg: 237 232 227;
-    --color-tag-neutral-text: 122 110 104;
+    --color-tag-frontend-bg: 244 234 230;
+    --color-tag-frontend-text: 168 96 72;
+    --color-tag-backend-bg: 232 238 226;
+    --color-tag-backend-text: 78 108 68;
+    --color-tag-devops-bg: 228 234 240;
+    --color-tag-devops-text: 76 100 130;
+    --color-tag-neutral-bg: 238 234 228;
+    --color-tag-neutral-text: 118 106 94;
+    --color-success: 90 140 90;
+    --color-error: 180 80 60;
+    --color-shadow: 120 80 50;
   }
 
   .dark {
@@ -32,19 +37,24 @@
     --color-card: 30 22 16;
     --color-border: 58 46 38;
     --color-heading: 232 221 212;
-    --color-body: 122 100 88;
-    --color-muted: 74 56 40;
+    --color-body: 148 128 112;
+    --color-muted: 110 90 74;
     --color-accent: 201 125 90;
+    --color-accent-hover: 220 150 115;
+    --color-accent-subtle: 62 42 28;
     --color-accent-fill: 46 30 18;
     --color-accent-text: 196 149 106;
-    --color-tag-frontend-bg: 46 34 24;
-    --color-tag-frontend-text: 196 149 106;
-    --color-tag-backend-bg: 30 42 30;
-    --color-tag-backend-text: 106 158 120;
-    --color-tag-devops-bg: 30 34 46;
-    --color-tag-devops-text: 106 136 176;
-    --color-tag-neutral-bg: 42 36 32;
-    --color-tag-neutral-text: 138 120 104;
+    --color-tag-frontend-bg: 44 30 26;
+    --color-tag-frontend-text: 210 146 120;
+    --color-tag-backend-bg: 26 36 24;
+    --color-tag-backend-text: 130 168 116;
+    --color-tag-devops-bg: 26 30 42;
+    --color-tag-devops-text: 126 152 186;
+    --color-tag-neutral-bg: 40 34 28;
+    --color-tag-neutral-text: 152 136 118;
+    --color-success: 106 158 120;
+    --color-error: 200 100 80;
+    --color-shadow: 10 6 2;
   }
 
   html {
